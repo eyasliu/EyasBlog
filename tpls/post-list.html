@@ -1,0 +1,42 @@
+<div ui-view="home-header"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <!--文章列表项-->
+            <div class="panel" ng-repeat="post in posts">
+                <div class="panel-body">
+                    <a href="#/posts/{{post.ID}}">
+                        <a href="#/posts/{{post.ID}}" class="post-title">{{post.post_title}} </a>
+                        <div class="attrs">
+                            <div class="attr">
+                                <i class="glyphicon glyphicon-eye-open"></i>
+                                <span>{{post.views}}</span>
+                            </div>
+                            <div class="attr">
+                                <i class="glyphicon glyphicon-time"></i>
+                                <span>{{post.post_date}}</span>
+                            </div>
+                        </div>
+                        <div class="thumbnail" ng-if="post.thumbnail">
+                            <a href="#/posts/{{post.ID}}">
+                                <img bg-src="{{post.thumbnail}}" alt="{{post.post_title}}">
+                            </a>
+                        </div>
+                        <div class="post-abstract">
+                            <a href="#/posts/{{post.ID}}"> {{post.post_content}} </a>
+                        </div>
+                    </a>
+                </div>
+                <div class="panel-footer">
+                    <a href="#/posts/{{post.ID}}">查看全文</a>
+                </div>
+            </div>
+
+
+        </div>
+        <!--./col-xs-12-->
+    </div>
+    <!--        /row-->
+
+
+</div>
