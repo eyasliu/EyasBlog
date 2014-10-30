@@ -9,20 +9,14 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <i class="glyphicon glyphicon-home"></i>Eyas Blog</a>
+                <i class="glyphicon glyphicon-home"></i>{{golbal.siteName}}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">wordpress</a>
-                </li>
-                <li><a href="#">drupal</a>
-                </li>
-                <li><a href="#">PHP</a>
-                </li>
-                <li><a href="#">前端</a>
-                </li>
+                <li ng-repeat="cate in golbal.cates"><a href="#">{{cate.name}}</a></li>
+                <li><a href="#" onclick="clearCache()" class="btn btn-block btn-warning">清除缓存</a></li>
 
             </ul>
         </div>

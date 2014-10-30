@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-xs-12">
             <!--文章列表项-->
-            <div class="panel" ng-repeat="post in posts">
+            <div class="panel" ng-repeat="post in posts | orderBy:orderList">
                 <div class="panel-body">
                     <a href="#/posts/{{post.ID}}">
                         <a href="#/posts/{{post.ID}}" class="post-title">{{post.post_title}} </a>
@@ -19,11 +19,11 @@
                         </div>
                         <div class="thumbnail" ng-if="post.thumbnail">
                             <a href="#/posts/{{post.ID}}">
-                                <img bg-src="{{post.thumbnail}}" alt="{{post.post_title}}">
+                                <img ng-src="{{post.thumbnail}}" alt="{{post.post_title}}">
                             </a>
                         </div>
                         <div class="post-abstract">
-                            <a href="#/posts/{{post.ID}}"> {{post.post_content}} </a>
+                            <a href="#/posts/{{post.ID}}"> {{post.post_abstract}} </a>
                         </div>
                     </a>
                 </div>

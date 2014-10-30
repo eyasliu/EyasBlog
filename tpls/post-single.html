@@ -18,20 +18,7 @@
                 </div>
 
                 <div class="text">
-                    <p>DooPHP框架是一个很简单的小框架，它实现了MVC、ORM、路由，并且实现的非常好用，没有其他多余的功能。</p>
-                    <p>DooPHP默认是支持Mysql的，官方文档也只介绍了链接Mysql的例子，对于SQLite则只字未提。但是，它本身是实现了SQLite，只是没有说罢了。</p>
-                    <p>假设是从官方包里刚解压的时候，步骤是这样子的</p>
-                    <p>1、打开 /app/protected/config/db.conf.php 编辑，里面全是注释，注释说明了，连接方式是这样的</p>
-                    <pre>$dbconfig[ Environment or connection name] = array(Host, Database, User, Password, DB Driver, Make Persistent Connection?);
-                    </pre>
-                    <p>连接Mysql的代码例子是：</p>
-                    <pre>$dbconfig['dev'] = array('localhost', 'database', 'root', '1234', 'mysql', true);
-                    </pre>
-                    <p>连接SQLite的代码例子是：</p>
-                    <pre>$dbconfig['dev'] = array($config['SITE_PATH'].'/protected/config/dblog.sqlite', '', '', '', 'sqlite', true);
-                    </pre>
-                    <p>注意SQLite的文件地址就行了，接下来，到 /app/index.php 取消第4、22、23行的注释。</p>
-                    <p>搞定！</p>
+                    {{post[0].post_content}}
                 </div>
 
             </div>

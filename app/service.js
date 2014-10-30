@@ -24,7 +24,8 @@ eyasBlog.constant('baseConfig', {
 eyasBlog.factory('siteConfig', ['$http', 'baseConfig',
     function($http, baseConfig) {
         var data = [];
-        data.dataRootUrl = baseConfig.siteUrl + "webservice/get_posts/?post_type=post";
+        data = baseConfig;
+        data.dataRootUrl = baseConfig.siteUrl + "webservice/get_posts/?post_type=post&qv[orderby]=date&qv[order]=desc";
         data.cates = baseConfig.categorys;
         return data;
     }

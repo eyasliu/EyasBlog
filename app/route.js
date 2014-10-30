@@ -18,10 +18,12 @@ eyasBlog.config(function($stateProvider, $urlRouterProvider) {
             url: '/posts/:pid',
             views: {
                 '': {
-                    templateUrl: 'tpls/post-single.html'
+                    templateUrl: 'tpls/post-single.html',
+                    controller: 'PostDetailCtrl'
                 },
                 'single-header@single': {
-                    templateUrl: 'tpls/single-header.html'
+                    templateUrl: 'tpls/single-header.html',
+                    controller: 'HeaderCtrl'
                 }
             }
         })
